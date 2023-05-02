@@ -19,7 +19,8 @@ const RegisterScreen = () => {
     .then((userCredential) => {
       const user = userCredential.user;
       setResult(user);
-      navigation.navigate('HomeScreen')
+      navigation.navigate('App', { screen: 'Home' })
+
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -59,7 +60,7 @@ const RegisterScreen = () => {
             <Text style={styles.buttonText}>Register</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => navigation.goBack()}
+            onPress={() =>navigation.navigate('LoginScreen',{ screen: 'LoginScreen' })}
             style={[styles.button,styles.buttonOutline]}
           >
             <Text style={styles.buttonOutlineText} >Go Back</Text>

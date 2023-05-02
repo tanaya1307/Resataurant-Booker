@@ -68,7 +68,7 @@ import { StyleSheet } from 'react-native';
     }
     ,icon:{
         position:'absolute',
-        top:20,
+        bottom:20,
         width:80,
         height:80
      

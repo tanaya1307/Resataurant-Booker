@@ -1,6 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
+
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCyRySTTsdv1sTyoe5195a2u5zS65K17wg",
@@ -13,4 +15,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+// const storage = firebase.storage().ref('gs://uber-eats-clone-373817.appspot.com');
+const auth = getAuth(app);
+export {auth}

@@ -20,7 +20,7 @@ const LoginScreen = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         
-        navigation.navigate('HomeScreen')
+        navigation.navigate('App', { screen: 'Home' })
         
       } 
       
@@ -62,7 +62,7 @@ const handleLogin =()=>{
     behavior="padding"
     enabled
     >
-        <Image source={dinnericon} style={styles.icon}/> 
+       
         
 
     <View >
@@ -100,7 +100,7 @@ const handleLogin =()=>{
     </View>
     {/* <View><Text>{result}</Text></View> */}
    
-   
+    <Image source={dinnericon} style={styles.icon}/> 
     </KeyboardAvoidingView>
     </ImageBackground>
   )
