@@ -65,7 +65,7 @@ const pickImage = async () => {
 }
 const styles = StyleSheet.create({
   container: {
-    margin: '50%',
+    margin: '40%',
     backgroundColor:'none',
     border:'none'
     

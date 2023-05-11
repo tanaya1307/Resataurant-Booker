@@ -24,7 +24,7 @@ const HeaderButton=({activeTab,text,navigation,setActiveTab})=>
     textAlign:'center'
   }}
     onPress={()=>{setActiveTab(text)
-      navigation.navigate('Offers')
+      navigation.navigate('OfferScreen')
     }}>
         <Text style={{color:activeTab==text?'white':'black',
     fontSize:15, 
