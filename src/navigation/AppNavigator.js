@@ -9,6 +9,7 @@ import HomeScreen from '../screens/HomeScreen';
 import RestaurantDetailScreen from '../screens/RestaurantDetailScreen'
 import DrawerContent from '../components/Drawer'
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import ImageUpload from '../screens/ImageUpload';
 
 
 
@@ -44,7 +45,7 @@ export default function AppNavigator() {
       <Stack.Screen name="Register" component={RegisterScreen} />
       <Stack.Screen name="App" component={DrawerNavigator} />
       <Stack.Screen name="RestaurantDetailScreen" component={RestaurantDetailScreen} />
-      <Stack.Screen name="HomeStack" component={HomeStack} options={{ headerShown: false }} /> 
+       <Stack.Screen name="ImageUpload" component={ImageUpload} />
 
     </Stack.Navigator>
 

@@ -1,6 +1,8 @@
 import { View, Text ,Image,Button} from 'react-native'
 import React,{useState} from 'react'
 import Ratings from './Rating';
+import { useNavigation } from '@react-navigation/native';
+import AddPhoto from '../Button';
 
 
 
@@ -11,7 +13,7 @@ export default function About(props) {
   if (!props.route || !props.route.params || !props.route.params.name) {
     return <Text>Error: name parameter not found.</Text>;
   }
-
+ const navigation=useNavigation();
   const {name,image}=props.route.params;
  
   
@@ -21,6 +23,8 @@ export default function About(props) {
      <RestaurantTitle title={name}/>
      <RestaurantDescription description={description}/>
      <Ratings/>
+     <AddPhoto/>
+   
     
       </View>
   )

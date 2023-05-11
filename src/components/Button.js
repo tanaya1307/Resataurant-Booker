@@ -1,16 +1,49 @@
-import { View, Text,TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/core';
 
-export default function HeaderButton(props) {
+
+export default function AddPhoto() {
+  const navigation=useNavigation();
+  
   return (
-    <TouchableOpacity style={{backgroundColor:props.activeTab==props.text ?'black':'white',
-    paddingVertical:6,
-    paddingHorizontal:16,
-    borderRadius:30}}
-    onPress={()=>props.setActiveTab(props.text)}>
-        <Text style={{color:props.activeTab==props.text?'white':'black',
-    fontSize:15 
-    }}>{props.text}</Text>
+    <View
+    style={{
+        flex:1,
+        alignItems:'center',
+        flexDirection:'row',
+        position:'absolute',
+        top:240,
+        zIndex:999
+
+
+    }}
+    >
+    <View 
+     style={{
+        flexDirection:'row',
+        justifyContent:'center',
+        width:'100%'
+     }}
+    
+    >
+        <TouchableOpacity
+         style={{
+            marginTop:20,
+            backgroundColor:'black',
+            alignItems:'center',
+            padding:13,
+            borderRadius:40,
+            width:300,
+            position:'relative'
+         }}
+          onPress={()=>( navigation.navigate('ImageUpload'))} 
+        
+        >
+        <Text style={{color:'white'}} >Upload Photos</Text>
         </TouchableOpacity>
+     
+    </View>
+    </View>
   )
 }

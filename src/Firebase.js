@@ -1,9 +1,10 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import firebase from 'firebase/app'
+import { getStorage } from "firebase/storage";
 
 
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCyRySTTsdv1sTyoe5195a2u5zS65K17wg",
   authDomain: "uber-eats-clone-373817.firebaseapp.com",
@@ -14,7 +15,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app =initializeApp(firebaseConfig);
 // const storage = firebase.storage().ref('gs://uber-eats-clone-373817.appspot.com');
 const auth = getAuth(app);
-export {auth}
+const storage = getStorage(app);
+export {auth,app,firebase,storage}

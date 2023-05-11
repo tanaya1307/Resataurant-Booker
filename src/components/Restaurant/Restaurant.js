@@ -90,14 +90,20 @@ const styles = StyleSheet.create({
       color: '#555',
       border:'none'
     },
-    
+    image:{
+      
+      width:'100%',
+      height:180,
+      borderRadius:8,
+      
+    }
   });
 
   
   const RestaurantImage=(props)=>
   ( <>
-      <Image source={{uri:props.image}}
-      style={{width:'100%',height:180}}/>
+      <Image source={{uri:props.image} }
+      style={styles.image}/>
       <TouchableOpacity style={{position:'absolute',right:20}}>
         <MaterialCommunityIcons name='heart-outline' size={25} color='#fff'/>
       </TouchableOpacity>
